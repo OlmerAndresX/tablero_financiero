@@ -8,7 +8,7 @@ const portafolio = [
 // 1. Mostrar resumen en texto
 const contenedorResumen = document.getElementById("resumen");
 if (contenedorResumen) {
-  contenedorResumen.innerHTML = ""; // Restaurada la linea que faltaba
+  contenedorResumen.innerHTML = "";
   portafolio.forEach(item => {
     const div = document.createElement("div");
     div.style.marginBottom = "8px";

@@ -1,6 +1,6 @@
 // Datos simulados de portafolio de inversión
 const portafolio = [
-  { activo: "Acciones USA", valor: 4500, rendimiento: "+12.4%" },
+  { activo: "Acciones USA", valor: 100500, rendimiento: "+12.4%" },
   { activo: "Renta Fija", valor: 2800, rendimiento: "+5.1%" },
   { activo: "Efectivo", valor: 1200, rendimiento: "0.0%" }
 ];

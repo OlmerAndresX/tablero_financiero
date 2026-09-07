@@ -5,10 +5,10 @@ const portafolio = [
   { activo: "Efectivo", valor: 1200, rendimiento: "0.0%" }
 ];
 
-// 1. Mostrar resumen en texto en el panel "Métricas Principales"
+// 1. Mostrar resumen en texto
 const contenedorResumen = document.getElementById("resumen");
-// Verificación de seguridad por si el elemento no existe
 if (contenedorResumen) {
+  contenedorResumen.innerHTML = ""; // Restaurada la linea que faltaba
   portafolio.forEach(item => {
     const div = document.createElement("div");
     div.style.marginBottom = "8px";
@@ -17,7 +17,7 @@ if (contenedorResumen) {
   });
 }
 
-// 2. Configurar y renderizar gráfico en el panel "Distribución de Activos"
+// 2. Configurar y renderizar gráfico con Chart.js
 const canvas = document.getElementById('graficoPortafolio');
 if (canvas) {
   const ctx = canvas.getContext('2d');
@@ -33,7 +33,6 @@ if (canvas) {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false, // Ayuda a que no se deforme
       plugins: {
         legend: {
           labels: { color: '#f8fafc' }
